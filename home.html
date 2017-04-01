@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Kids' homepage</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- My css goes here -->
+    <link href="css/home_style.css" rel="stylesheet">
+  </head>
+  <body>
+		<div class="navbar navbar-default navbar-fixed-top headstyle">
+			 <div class="navbar-header">
+	
+			    	<h1><button style="font-size:30px;cursor:pointer;" onclick="openNavAndClose()">&#9776;</button> Kids' Web</h1>
+
+			</div>
+		</div>
+		<div class="container-fluid container-bump">
+		<div class="row row-mid">
+			 <div class="sidebar" id="sidenav">
+			 	<nav>
+		          <ul class="nav nav-sidebar">
+		          	<!-- <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li> -->
+		            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+		            <li><a href="#">Reports</a></li>
+		            <li><a href="#">Analytics</a></li>
+		            <li><a href="#">Export</a></li>
+		          </ul>
+		         <nav>
+	        </div>
+			<div class="col-xs-8 col-md-8 section_div content">
+				
+				<section>
+					<!-- Content goes here -->
+					<div class= "row">
+						
+						<div class="col-xs-6 col-md-6">
+							<div class="well">
+								<h3> Look at me!</h3>
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab fuga atque voluptate, animi veniam vitae id praesentium, excepturi laudantium perferendis quae vero placeat delectus cupiditate aliquid suscipit dignissimos, at temporibus. </p>
+							</div>
+							<div class="well">
+								<h3> Look at me here!</h3>
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab fuga atque voluptate, animi veniam vitae id praesentium, excepturi laudantium perferendis quae vero placeat delectus cupiditate aliquid suscipit dignissimos, at temporibus. </p>
+							</div>
+							<div class="well">
+								<h3> Look at me here,scroll!</h3>
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab fuga atque voluptate, animi veniam vitae id praesentium, excepturi laudantium perferendis quae vero placeat delectus cupiditate aliquid suscipit dignissimos, at temporibus. </p>
+							</div>
+						</div>
+						
+						<div class="col-xs-6 col-md-6 ">
+							<div class="well">
+								<h3> Look at me, too!</h3>
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab fuga atque voluptate, animi veniam vitae id praesentium, excepturi laudantium perferendis quae vero placeat delectus cupiditate aliquid suscipit dignissimos, at temporibus. </p>
+							</div>
+							<div class="well">
+								<h3> Look at me here,too!</h3>
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab fuga atque voluptate, animi veniam vitae id praesentium, excepturi laudantium perferendis quae vero placeat delectus cupiditate aliquid suscipit dignissimos, at temporibus. </p>
+							</div>
+							<div class="well">
+								<h3> Look at me here,scroll too!</h3>
+								<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab fuga atque voluptate, animi veniam vitae id praesentium, excepturi laudantium perferendis quae vero placeat delectus cupiditate aliquid suscipit dignissimos, at temporibus. </p>
+							</div>
+						</div>
+
+
+					</div>	
+
+
+
+				</section>
+			</div>
+			 <div class="col-xs-4 col-md-4 section_div aside text-center">
+			 	<div class="well">
+					<h3> I'll stay here on side!</h3>
+			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi fugit saepe eos laborum at molestiae, quisquam sint deleniti fugiat in, ullam, aut dolorem praesentium! Eos sit assumenda dolores tempora laboriosam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus placeat neque nam itaque facere, odit aspernatur impedit natus, animi cupiditate numquam tempora cum illum qui! Eos voluptatum odit esse dolorum! </p>
+
+				</div>
+						          
+		      </div>
+		</div>
+			<!-- <div class="row row-footer content">
+			<div class="col-xs-12 col-ms-12">
+			 	<footer>
+					<h5>Footer is at bottom.</h5>
+				
+				</footer>
+			</div>
+		</div> -->
+	</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+			function openNavAndClose() {
+			    
+
+			    var elements= document.getElementsByClassName("content");
+			    var asideContent=document.getElementsByClassName("aside")[0];
+
+			    console.log(elements[0].style.marginLeft);
+
+			    if(elements[0].style.marginLeft == "0px" || elements[0].style.marginLeft == "")
+			     {
+			    	console.log('in show');
+			    	document.getElementById("sidenav").style.width = "200px";
+			    	for (var i = elements.length - 1; i >= 0; i--) 
+			    	{
+				    	elements[i].style.marginLeft="250px";	
+				    	
+			     	};
+
+			     	asideContent.style.marginLeft="450px";
+
+
+			    }
+			    else
+			    {
+			    	 document.getElementById("sidenav").style.width = "0";
+				    //var elements= document.getElementsByClassName("content");
+
+				    for (var i = elements.length - 1; i >= 0; i--) {
+				    	
+				    	elements[i].style.marginLeft="0px";	
+				    };
+				    asideContent.style.marginLeft="0px";
+			     
+
+			    }
+
+			   
+			}
+
+			function closeNav() {
+			    document.getElementById("sidenav").style.width = "0";
+			    var elements= document.getElementsByClassName("content");
+
+			    for (var i = elements.length - 1; i >= 0; i--) {
+			    	elements[i].style.marginLeft="0px";
+			    };
+			}
+</script>
+  </body>
+</html>
